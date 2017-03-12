@@ -1,0 +1,88 @@
+userObj :
+{
+	"userId": "1316564398436061",
+	"status": false,
+	"profile": {
+		"first_name": "Rakesh",
+		"last_name": "DevAcc",
+		"profile_pic": "https://scontent.xx.fbcdn.net/v/t31.0-1/p720x720/10506738_10150004552801856_220367501106153455_o.jpg?oh=eca6d220e8f439bd13dbf19814e2febc&oe=592B1B8B",
+		"locale": "en_GB",
+		"timezone": 5.5,
+		"gender": "male"
+	},
+	"lastQuestion": {},
+	"chatData": {},
+	"lastQuestionKey": "select_menu",
+	"selectedRestaurantName": "",
+	"selectedRestaurantImage": "",
+	"selectedDay": ""
+}
+
+event :
+ {
+	"sender": {
+		"id": "1316564398436061"
+	},
+	"recipient": {
+		"id": "377075916018627"
+	},
+	"timestamp": 1488990443801,
+	"message": {
+		"mid": "mid.1488990443801:84c911f121",
+		"seq": 299,
+		"text": "hello"
+	}
+}
+witKey:
+{
+	"msg_id": "dcd5a9e6-a1b0-416b-9d64-22e71fd6b8a3",
+	"_text": "some shirt please",
+	"entities": {
+		"search_query": [{
+			"confidence": 0.9993646137814137,
+			"type": "value",
+			"value": "shirt",
+			"suggested": true
+		}]
+	}
+} {
+	"msg_id": "d6ad5c34-88bf-4557-8cd2-448ac117c80c",
+	"_text": "I want to buy a shirt",
+	"entities": {
+		"search_query": [{
+			"confidence": 0.9995348762164423,
+			"type": "value",
+			"value": "shirt",
+			"suggested": true
+		}],
+		"intent": [{
+			"confidence": 0.9868052389333747,
+			"value": "show_shirts"
+		}]
+	}
+}
+
+[{
+	"sender": {
+		"id": "1316564398436061"
+	},
+	"recipient": {
+		"id": "377075916018627"
+	},
+	"timestamp": 1489081356130,
+	"message": {
+		"mid": "mid.1489081356130:7de1e67f69",
+		"seq": 574,
+		"text": "hello"
+	}
+}]
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type" : "domain_whitelisting",
+  "whitelisted_domains" : ["https://www.facebook.com/ROMImate-377075916018627"],
+  "domain_action_type": "add"
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAYuL2XKYZCsBAOLJRZA80ZBINC8eGy8KpKk3ttFODZAxVb8h9iInaRLxh26SwQeg3ZA0rzeIoHkvdawPaf7RHJIUCZCGU1od3rqZBwDmRYDuoDSKBT7R1DQQvzHqbSm1ZClZA9V2I7A3XKNC8rspDy95MTYf72agZBWEDUw559rLz7xxYojzZCYBHj"
+
+http://sapient3-evaluation-dw.demandware.net/s/SiteGenesis/dw/shop/v17_2/product_search?q=shirt&client_id=5a40714c-52c3-44df-a00d-9d3bb2dc8ea8&expand=images,prices&refine_1=cgid=mens
+http://sapient3-evaluation-dw.demandware.net/s/SiteGenesis/dw/shop/v16_1/product_search?q=shirt&refine1=mens&count=3&expand=images,prices&client_id=5a40714c-52c3-44df-a00d-9d3bb2dc8ea8
