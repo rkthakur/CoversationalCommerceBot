@@ -52,7 +52,7 @@ app.use(bodyParser.json());
 
 //Respond to default request
 app.get('/', function(req, res) {
-	
+
 	fs.readFile("./index.html", function(err, data){
 		res.writeHead(200, {'Content-Type': 'text/html'});
 		res.write(data);
@@ -135,7 +135,7 @@ app.post('/webhook/', function(req, res) {
 });
 
 // Create an HTTP service.
-http.createServer(app).listen(CONFIG.port);
+http.createServer(app).listen(process.env.PORT || CONFIG.port);
 
 // setSSL(fs); //load SSL certificate
 
