@@ -52,7 +52,13 @@ app.use(bodyParser.json());
 
 //Respond to default request
 app.get('/', function(req, res) {
-    res.send('Hello, This online shop chatbot');
+	
+	fs.readFile("./index.html", function(err, data){
+		res.writeHead(200, {'Content-Type': 'text/html'});
+		res.write(data);
+		res.end();
+		});
+    //res.send('Hello, This online shop chatbot');
 });
 
 //Get platform callback and validate token
@@ -96,7 +102,7 @@ app.post('/webhook/', function(req, res) {
                     },
                     method: 'GET',
                     json: {
-                        fields: "first_name,last_name,profile_pic,locale,timezone,gender"
+                        fields: "first_name,last_name,profile_pic,locale,timezone,gender,email,relationship_status"
                     }
                 }, function(error, userData, body) {
 
@@ -105,6 +111,8 @@ app.post('/webhook/', function(req, res) {
                     } else if (userData.body.error) {
                         console.log('Error: ', userData.body.error)
                     } else {
+                    	console.log(userId);
+                    	console.log(JSON.stringify(body));
                         var userObj = new User(userId, userData.body); //Set user object
                         activeUsers.push(_.clone(userObj)); //add user
 

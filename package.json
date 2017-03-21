@@ -17,7 +17,8 @@
     "request": "^2.72.0",
     "serve-static": "^1.10.2",
     "underscore": "latest",
-    "wit-js": "0.0.1"
+    "wit-js": "0.0.1",
+    "node-rest-client": "1.0.0"
   },
   "devDependencies": {},
   "scripts": {
