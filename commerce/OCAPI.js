@@ -1,6 +1,6 @@
 var Client = require('node-rest-client').Client;
 //REST server properties
-var host_url = "http://sapient3-evaluation-dw.demandware.net";
+var host_url = "http://sapient5-evaluation-dw.demandware.net";
 var api_path = "/s/SiteGenesis/dw/shop/v17_2/";
 var server_url = host_url+api_path;
 var client_id = "5a40714c-52c3-44df-a00d-9d3bb2dc8ea8";
